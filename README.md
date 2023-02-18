@@ -138,6 +138,22 @@ Para poder arrancar el proyecto se debe ejecutar el siguiente comando desde tare
 python manage.py runserver
 ```
 
+NOTA IMPORTANTE: Al necesitarse selenium para acceder a estos datos, al momento de ejecutar Actualizar lista, se cargaran alrededor de 2800 páginas en donde se encuentran las tablas con la información, por lo que considere lo siguiente:
+
+* Si va a ejecutar todas las páginas, considere que el pc no se puede suspender sino fallará la ejecución de obtención del archivo
+* El ejecutar la totalidad de las páginas, dependiendo del rendimiento de cada computador, esto tomará un largo periodo de tiempo (en mi caso 2 horas aproximadamente)
+* Sin embargo, podemos reducir la extención, ya que esto lo lee automaticamente, pero podemos cambiar la siguiente variable del archivo views.py en la linea 86 del código.
+
+```
+# Condición por defecto
+proyects = create_dict_data(get_list_data(driver, total_pages), list_headers)
+
+
+#Condición actualizada, la variable total_pages en este caso se cambia por 300 que significa que el codigo obtendrá las 300 primeras páginas.
+
+proyects = create_dict_data(get_list_data(driver, 300), list_headers)
+```
+
 Luego nos dirigimos a http://127.0.0.1:8000 y veremos una tabla vacía con un boton de Actualizar lista el cual debemos presionar y llamara a la vista que extrae la información y al finalizar se observa la tabla con todos los datos obtenidos.
 
 Tambien si se quiere ver la información desde el administrador, nos dirigimos a http://127.0.0.1:8000/admin ingresamos los datos de usuario y contraseña que se crearon en unas instrucciones atrás, y tendremos a la vista en el panel izquierdo el modelo Proyectos el cual cuenta con una vista de algunas columnas con la información obtenida.
