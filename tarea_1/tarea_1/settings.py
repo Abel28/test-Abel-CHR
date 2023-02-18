@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'multiselectfield',
 
     'bike',
-    'django_admin_geomap',
 ]
 
 MIDDLEWARE = [
