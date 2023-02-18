@@ -40,6 +40,10 @@ class Station(models.Model, GeoItem):
     slots = models.IntegerField(null=True, blank=True)
     uid = models.IntegerField(null=True, blank=True)
 
+    class META:
+        verbose_name = "Estación"
+        verbose_name = "Estaciones"
+
 
     def __str__(self) -> str:
         return self.name

@@ -12,6 +12,10 @@ class Project(models.Model):
     fecha = models.CharField(max_length=255)
     estado = models.CharField(max_length=255, null=True)
 
+    class META:
+        verbose_name = "Proyecto"
+        verbose_name = "Proyectos"
+
     def __str__(self):
         return self.nombre
     
