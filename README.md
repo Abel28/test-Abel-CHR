@@ -57,7 +57,7 @@ DATABASES = {
 }
 ```
 
-Nota: Si no se tuvise instalado PostgreSQL aqui dejo el link donde están las instrucciones: [https://www.postgresql.org/download/](PostgreSQL Download)
+Nota: Si no se tuvise instalado PostgreSQL aqui dejo el link donde están las instrucciones: [PostgreSQL Download](https://www.postgresql.org/download/)
 
 ## Tarea 1
 
