@@ -18,7 +18,7 @@ pip install pipenv
 Luego clonamos el proyecto en una carpeta que acomode al desarrollador:
 
 ```
-git clone git@github.com:Abel28/test-Abel-CHR.git
+git clone https://github.com/Abel28/test-Abel-CHR.git
 ```
 
 Estando dentro de la carpeta del proyecto desde la terminal, procedemos a instalar el entorno virtual:
@@ -44,7 +44,8 @@ A continuación es importante configurar la base de datos PostgreSQL ya que es n
 
 ```
 
-#Se debe considerar que los parametros de a continuación son los que se obtienen por defecto al instalar PostgreSQL en local, aqui dejo los datos por defecto que se crean al instalar postgresql:
+#Se debe considerar que los parametros de a continuación son los que se obtienen por defecto al instalar PostgreSQL en local
+#Aqui dejo los datos por defecto que se crean al instalar postgresql:
 
 DATABASES = {
         'default': {
