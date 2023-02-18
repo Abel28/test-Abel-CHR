@@ -1,7 +1,6 @@
 from django.db import models
 import uuid
 from multiselectfield import MultiSelectField
-from django_admin_geomap import GeoItem
 
 # Create your models here.
 
