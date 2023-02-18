@@ -23,6 +23,8 @@ def api_bikes(request):
 
     for station in data_bikes['network']['stations']:
 
+        print(station)
+
         if 'post_code' in station['extra'].keys():
             Station.objects.get_or_create(
                 id = station["id"],

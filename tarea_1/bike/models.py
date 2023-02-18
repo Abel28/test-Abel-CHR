@@ -25,12 +25,12 @@ class Station(models.Model):
     latitude = models.FloatField("Latitude", null=True, blank=True)
     longitude = models.FloatField("Longitude", null=True, blank=True)
     name = models.CharField("Name", max_length=255, null=True, blank=True)
-    timestamp = models.DateTimeField(null=True, blank=True)
+    timestamp = models.CharField(null=True, blank=True, max_length=200)
     address = models.CharField("address", max_length=255, null=True, blank=True)
     altitude = models.FloatField(null=True, blank=True)
     ebikes = models.IntegerField(null=True, blank=True)
     has_ebikes = models.BooleanField(null=True, blank=True)
-    last_updated = models.IntegerField(null=True, blank=True)
+    last_updated = models.CharField(null=True, blank=True, max_length=200)
     normal_bikes = models.IntegerField(null=True, blank=True)
     payment =  MultiSelectField(choices=PAYMENT_CHOICES, null=True, blank=True)
     post_code = models.CharField(null=True, max_length=100, default=None, blank=True)
@@ -44,7 +44,7 @@ class Station(models.Model):
         verbose_name = "Estaciones"
 
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name
 
     def get_url_map(self):
