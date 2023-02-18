@@ -5,7 +5,7 @@ from multiselectfield import MultiSelectField
 # Create your models here.
 
 
-class Station(models.Model, GeoItem):
+class Station(models.Model):
 
     '''
     Modelo Stations en donde se almacena la información de la API
