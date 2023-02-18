@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    
+
+    <div class="container">
+
+        <h1 class="mt-4">Proyectos SEIA</h1>
+
+        <div class="container">
+            <div class="row">
+                <form action="" method="get">
+                    
+                    <div class="btn-group col 4">
+                        <a class="btn btn-success col" href="{% url 'projects:api' %}">Actualizar Lista</a>
+                        <a class="btn btn-warning col" href="{% url 'projects:json' %}">Obtener Json</a>
+                    </div>
+                </form>
+                
+                
+            </div>
+            
+        </div>
+
+        <div class="container">
+
+            <table class="table table-striped mt-4">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nº</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Region</th>
+                        <th>Tipología</th>
+                        <th>Titular</th>
+                        <th>Inversión</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for project in object_list %}
+                    
+                    <tr>
+                        <td>{{project.id}}</td>
+                        <td>{{project.nombre}}</td>
+                        <td>{{project.tipo}}</td>
+                        <td>{{project.region}}</td>
+                        <td>{{project.tipologia}}</td>
+                        <td>{{project.titular}}</td>
+                        <td>{{project.inversion}}</td>
+                        <td>{{project.fecha}}</td>
+                        <td>{{project.estado}}</td>
+                        
+                    </tr>
+                    
+                    {% endfor %}
+                </tbody>
+    
+            </table>
+    
+
+        </div>
+    
+    </div>
+
+
+    
+    
+    {% endblock content %}

@@ -158,3 +158,5 @@ proyects = create_dict_data(get_list_data(driver, 300), list_headers)
 Luego nos dirigimos a http://127.0.0.1:8000 y veremos una tabla vacía con un boton de Actualizar lista el cual debemos presionar y llamara a la vista que extrae la información y al finalizar se observa la tabla con todos los datos obtenidos.
 
 Tambien si se quiere ver la información desde el administrador, nos dirigimos a http://127.0.0.1:8000/admin ingresamos los datos de usuario y contraseña que se crearon en unas instrucciones atrás, y tendremos a la vista en el panel izquierdo el modelo Proyectos el cual cuenta con una vista de algunas columnas con la información obtenida.
+
+Tambien en la página principal, se puede visualizar en formato json los datos obtenidos en la tabla.

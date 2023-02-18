@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <h1 class="mt-4 mb-3">Información de estación - {{ object.name }}</h1>
+
+    <div class="row">
+        <div class="col">
+            <div class="card border-primary mb-3 col-6">
+
+                <div class="card-header">General Information</div>
+                <div class="card-body">
+
+
+                    
+                        <div class="form-group">
+                            <fieldset disabled="">
+                                <label class="form-label" for="disabledInput">Slots</label>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                    value="{{ object.empty_slots }}">
+                            </fieldset>
+                        
+
+
+                        
+                            <fieldset disabled="">
+                                <label class="form-label" for="disabledInput">Free Bikes</label>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                    value="{{ object.free_bikes }}">
+                            </fieldset>
+                        
+
+
+                        
+                            <fieldset disabled="">
+                                <label class="form-label" for="disabledInput">Latitude</label>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                    value="{{ object.latitude }}">
+                            </fieldset>
+                        
+
+
+                        
+                            <fieldset disabled="">
+                                <label class="form-label" for="disabledInput">Longitude</label>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                    value="{{ object.longitude }}">
+                            </fieldset>
+
+                            <fieldset disabled="">
+                                <label class="form-label" for="disabledInput">Free bikes</label>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                    value="{{ object.free_bikes }}">
+                            </fieldset>
+                            
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+
+        <div class="card border-primary mb-3 col-6">
+            <div class="card-header">Extra information</div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="form-group">
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Address</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.address }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Altitude</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.altitude }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Ebikes</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.ebikes }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Last Updated</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.last_updated }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Normal bikes</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.normal_bikes }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Payment</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.payment }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Payment Terminal</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.payment_terminal }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Post Code</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.post_code }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Renting</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.renting }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Returning</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.returning }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">Slots</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.slots }}">
+                        </fieldset>
+                        <fieldset disabled="">
+                            <label class="form-label" for="disabledInput">UID</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="" disabled=""
+                                value="{{ object.uid }}">
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+            
+    
+
+
+    
+
+        
+
+    
+</div>
+
+
+{% endblock content %}

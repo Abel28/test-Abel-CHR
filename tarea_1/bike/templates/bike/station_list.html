@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    
+
+    <div class="container">
+
+        <h1 class="mt-4">Data base Bike Stations</h1>
+
+        <div class="container">
+            <div class="row">
+                <form action="" method="get">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar nombre de estación" name="search_filter">
+                        <button class="btn btn-primary" type="submit" id="button-addon2">Buscar</button>
+                      </div>
+                    <div class="btn-group col 4">
+                        <a class="btn btn-success col-3" href="{% url 'bike:bikes_api' %}">Actualizar Lista</a>
+                    </div>
+                </form>
+                
+                
+            </div>
+            
+        </div>
+
+        <div class="container">
+
+            <table class="table table-striped mt-4">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Slots</th>
+                        <th>Free Bikes</th>
+                        <th>Ubication</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for station in object_list %}
+                    
+                    <tr>
+                        <td><a href="{% url 'bike:detail' station.id %}">{{station.name}}</a></td>
+                        <td>{{station.empty_slots}}</td>
+                        <td>{{station.free_bikes}}</td>
+                        <td><a href="{{station.get_url_map}}" target=”_blank”>Aqui</a></td>
+                    </tr>
+                    
+                    {% endfor %}
+                </tbody>
+    
+            </table>
+    
+
+        </div>
+    
+    </div>
+
+
+    
+    
+    {% endblock content %}
